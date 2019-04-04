@@ -1,0 +1,13 @@
+---
+- name: installing jenkins in remote systems
+  hosts: all
+  tasks: 
+    - name: copying .sh file to remote computer
+      copy:
+        src: /root/git/jenkins.sh
+        dest: /bin/
+        mode: 0777
+    - name: exicuting jenkins.sh 
+      shell: jenkins.sh
+       
+
